@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#382727"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/BombillaVerde"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginBottom="129dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/BombillaAmarilla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BombillaAmarilla"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="131dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/BombillaRoja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BombillaVerde"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BombillaRoja"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnIniciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BombillaAmarilla">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="22dp"
+        android:backgroundTint="#FF5722"
+        android:onClick="start"
+        android:text="@string/btnIniciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/BombillaRoja"
+        app:layout_constraintTop_toBottomOf="@+id/BombillaRoja" />
+</androidx.constraintlayout.widget.ConstraintLayout>
